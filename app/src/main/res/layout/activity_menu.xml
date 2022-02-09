@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/id_menuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/id_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="@+id/id_menuTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_menuTitle"
+        app:layout_constraintTop_toTopOf="@+id/id_menuTitle"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_menu_list"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_menuTitle"
+        app:layout_constraintVertical_bias="0.01">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_appetizer_rv"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_menu_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_menu_list"
+        app:layout_constraintTop_toTopOf="@+id/id_menu_list" />
+
+    <TextView
+        android:id="@+id/id_MainDishes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+
+        android:text="Main Dishes"
+        app:layout_constraintBottom_toTopOf="@+id/id_menu_list"
+        app:layout_constraintEnd_toEndOf="@+id/id_menu_list"
+        app:layout_constraintStart_toStartOf="@+id/id_menu_list"
+        app:layout_constraintTop_toBottomOf="@+id/id_menuTitle" />
+
+    <TextView
+        android:id="@+id/id_Appetizers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Appetizers"
+        android:textSize="30dp"
+        android:textColor="@color/purple_500"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/id_appetizer_rv"
+        app:layout_constraintEnd_toEndOf="@+id/id_appetizer_rv"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/id_appetizer_rv"
+        app:layout_constraintTop_toBottomOf="@+id/id_menuTitle"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_desert_recycler"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/id_menu_list"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_menu_list" />
+
+    <TextView
+        android:id="@+id/id_desserts_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dessert"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_desert_recycler"
+        app:layout_constraintEnd_toEndOf="@+id/id_desert_recycler"
+        app:layout_constraintStart_toStartOf="@+id/id_desert_recycler"
+        app:layout_constraintTop_toBottomOf="@+id/id_menu_list" />
+
+    <Button
+        android:id="@+id/id_add_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="40dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/id_menuTitle"
+        app:layout_constraintEnd_toStartOf="@+id/id_menuTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_menuTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
